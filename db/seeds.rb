@@ -11,11 +11,11 @@ puts "🗑 Clearing DB..."
 Flat.destroy_all
 
 puts "🌱 Seeding data..."
-i = 0
+i = 1
 
-20.times do
+100.times do
   Flat.create!(
-    name: "#{123 + i} Main St",
+    name: "Flat ##{i}",
     address: Faker::Address.full_address,
     description: "This is an apartment",
     price_per_night: (100..1000).to_a.sample,
@@ -23,3 +23,5 @@ i = 0
   )
   i += 1
 end
+
+puts "✨ All done!"
