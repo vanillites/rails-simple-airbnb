@@ -17,7 +17,7 @@ i = 1
   Flat.create!(
     name: "Flat ##{i}",
     address: Faker::Address.full_address,
-    description: "This is an apartment",
+    description: "This is a description of an apartment near downtown #{Faker::Nation.capital_city}! It's a short walk from popular bars and restaurants.",
     price_per_night: (100..1000).to_a.sample,
     number_of_guests: (1..5).to_a.sample
   )
